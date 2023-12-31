@@ -1,0 +1,752 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    width: 100%;
+    z-index: 3;
+    position: fixed;
+    top: 0%;
+    border-bottom: 0.1px solid rgb(190, 190, 190);
+    background: white;
+    overflow: hidden;
+}
+
+.navbar{
+    width: 75%;
+    height: 90px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1{
+    font-size: 48px;
+    color: grey;
+}
+
+.navbar h1 #logo{
+    font-size: 44px;
+    color: red;
+    text-decoration: underline;
+    text-decoration-thickness: 2.5px;
+    text-underline-offset: 5px;
+    text-decoration-color: darkblue;
+}
+
+#close{
+    font-size: 32px;
+    display: none;
+}
+
+.nav-main{
+    margin-top: 40px;
+}
+
+.nav-main ul li{
+    margin: 14px 28px;
+    display: inline-block;
+}
+
+.nav-main ul li a{
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.nav-main select{
+    border: none;
+    font-weight: 600;
+    background-color: white;
+}
+
+#menu{
+    display: none;
+}
+
+.nav-top{
+    width: 65%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgb(255, 235, 235);
+}
+
+.nav-top p{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.nav-top a{
+    cursor: pointer;
+    margin-left: 32px;
+    padding: 8px 32px;
+    background: red;
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    .nav-top{
+        width: 100%;
+        justify-content: end
+    }
+    nav{
+        overflow: visible;
+        top: 30px;
+    }
+    .navbar{
+        width: 90%;
+    }
+    .navbar h1{
+        font-size: 32px;
+    }
+    .navbar h1 #logo{
+        font-size: 28px;
+    }
+    .nav-main{
+        height: 95vh;
+        width: 200px;
+        position: absolute;
+        top: -40%;
+        right: -200px;
+        z-index: 2;
+        background: #e0edc1;
+        transition: 1s;
+    }
+    .nav-main ul{
+        margin: 14% 0%;
+    }
+    #close{
+        display: block;
+        font-size: 40px;
+        font-weight: 900;
+        margin: 8% 12% 0;
+    }
+    #menu{
+        display: block;
+        font-size: 24px;
+        margin-right: 16px;
+    }
+    .nav-main select{
+        background: transparent;
+        margin-left: -3px;
+    }
+    .nav-top p{
+        padding-right: 16px;
+    }
+    .nav-top a{
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .navbar{
+        width: 90%;
+        height: 80px;
+    }
+    .navbar h1{
+        font-size: 28px;
+    }
+    .navbar h1 #logo{
+        font-size: 24px;
+    }
+    .nav-main{
+        margin-top: 36px;
+    }
+    .nav-main ul li{
+        margin: 3px 6px;
+    }
+    .nav-main ul li a{
+        font-size: 14px;
+    }
+    .nav-main select{
+        font-size: 12px;
+    }
+    .nav-top{
+        height: 30px;
+    }
+    .nav-top p{
+        font-size: 18px;
+    }
+    .nav-top a{
+        font-size: 12px;
+        margin-left: 24px;
+        padding: 6px 24px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .navbar{
+        width: 85%;
+    }
+    .navbar h1{
+        font-size: 36px;
+    }
+    .navbar h1 #logo{
+        font-size: 32px;
+    }
+    .nav-main ul li{
+        margin: 6px 18px;
+    }
+    .nav-top a{
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .navbar{
+        width: 75%;
+        height: 90px;
+    }
+    .navbar h1{
+        font-size: 48px;
+    }
+    .navbar h1 #logo{
+        font-size: 44px;
+    }
+    .nav-main{
+        margin-top: 40px;
+    }
+    .nav-main ul li{
+        margin: 14px 28px;
+    }
+    .nav-main ul li a{
+        font-size: 18px;
+    }
+    .nav-main select{
+        font-size: 15px;
+    }
+    .nav-top{
+        height: 35px;
+    }
+    .nav-top p{
+        font-size: 20px;
+    }
+    .nav-top a{
+        margin-left: 32px;
+        padding: 8px 32px;
+    }
+}
+
+header{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+header .row{
+    display: flex;
+    justify-content: space-between;
+}
+
+header .row .col-1{
+    width: 50%;
+    padding: 16.5% 0 19.5%;
+    position: relative;
+}
+
+header .row .col-1-con{
+    width: 75%;
+    position: absolute;
+    right: 0;
+}
+
+header .row .col-1-con h1{
+    font-size: 58px;
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+
+header .row .col-1-con p{
+    width: 80%;
+    font-size: 17.5px;
+    line-height: 1.35;
+}
+
+header .row .col-1-con i{
+    color: red;
+}
+
+header .row .col-2{
+    width: 50%;
+    padding: 24% 0;
+    background-image: url(Images/Img-1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.form{
+    width: max-content;
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    top: 72%;
+    left: 50%;
+    padding: 0 8%;
+    transform: translateX(-50%);
+}
+
+.form ul{
+    background: white;
+}
+
+header .form ul li{
+    display: inline-block;
+    padding: 32px 60px 32px 32px;
+    border: 0.5px solid rgb(190, 190, 190);
+}
+
+header .form ul li select{
+    font-size: 16px;
+    border: transparent;
+}
+
+#Search{
+    font-size: 16px;
+    padding: 32px 48px;
+    color: white;
+    border: transparent;
+    background: red;
+    border-radius: 6px;
+}
+
+@media screen and (max-width:600px) {
+    header .row{
+        display: block;
+    }
+    header .row .col-1{
+        width: 100%;
+        padding: 32% 0% 80%;
+    }
+    header .row .col-1-con{
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+    }
+    header .row .col-1-con h1{
+        font-size: 40px;
+        margin-bottom: 16px;
+    }
+    header .row .col-1-con p{
+        width: 90%;
+        font-size: 18.5px;
+    }
+    header .row .col-2{
+        width: 100%;
+        padding: 56% 0%;
+    }
+    .form{
+        width: 90%;
+        display: block;
+        position: absolute;
+        z-index: 2;
+        padding: 0;
+        top: 30%;
+    }
+    header .form ul li{
+        border-radius: 6px;
+        display: grid;
+        margin-bottom: 8px;
+        padding: 20px 32px 20px 20px;
+    }
+    #Used, #Make, #Model, #Type{
+        display: inline-block;
+        width: 35.4%;
+    }
+    #Search{
+        width: 100%;
+        padding: 18px 32px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    header .row .col-1{
+        padding: 24% 0 20%;
+    }
+    header .row .col-1-con h1{
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+    header .row .col-1-con p{
+        font-size: 8.5px;
+    }
+    header .row .col-2{
+        padding: 30% 0;
+    }
+    header .form ul li{
+        padding: 12px 16px 12px 8px;
+    }
+    header .form ul li select{
+        font-size: 11px;
+    }
+    #Search{
+        font-size: 11px;
+        padding: 8px 24px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header .row .col-1-con h1{
+        font-size: 30px;
+    }
+    header .row .col-1-con p{
+        font-size: 10px;
+    }
+    header .form ul li{
+        padding: 16px 24px 16px 16px;
+    }
+    header .form ul li select{
+        font-size: 12px;
+    }
+    #Search{
+        font-size: 12px;
+        padding: 16px 32px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    header .row .col-1{
+        padding: 21.5% 0 18%;
+    }
+    header .row .col-1-con h1{
+        font-size: 40px;
+        margin-bottom: 16px;
+    }
+    header .row .col-1-con p{
+        font-size: 14px;
+    }
+    header .form ul li{
+        padding: 24px 36px 24px 24px;
+    }
+    header .form ul li select{
+        font-size: 14.5px;
+    }
+    #Search{
+        font-size: 14.5px;
+        padding: 24px 40px;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    header .row .col-1{
+        padding: 16.5% 0% 19.5%;
+    }
+    header .row .col-1-con h1 {
+        font-size: 58px;
+        margin-bottom: 24px;
+    }
+    header .row .col-1-con p{
+        font-size: 17.5px;
+    }
+    header .row .col-2{
+        padding: 24% 0%;
+    }
+    header .form ul li {
+        padding: 32px 60px 32px 32px;
+    }
+    header .form ul li select{
+        font-size: 16px;
+    }
+    #Search{
+        font-size: 16px;
+        padding: 32px 48px;
+    }
+}
+
+section{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.main{
+    padding: 6% 12%;
+}
+
+.main h1{
+    font-size: 32px;
+    margin-bottom: 56px;
+}
+
+.main-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-row .col-1{
+    width: 18%;
+    height: max-content;
+}
+
+.main-row .col-1 h1{
+    font-size: 24px;
+    margin-bottom: 48px;
+}
+
+#Category{
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: red;
+}
+
+#Brand{
+    font-size: 20px;
+    color: silver;
+}
+
+.main-row .col-1 h3{
+    font-size: 22px;
+    margin-top: 48px;
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
+}
+
+.main-row .col-2{
+    width: 80%;
+    max-height: 375px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: auto auto;
+}
+
+.card-1, .card-2, .card-3, .card-4{
+    border: 0.5px solid rgb(190, 190, 190);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.card-1 .container h1, .card-2 .container h1, .card-3 .container h1, .card-4 .container h1{
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.card-1 .container button, .card-2 .container button, .card-3 .container button, .card-4 .container button{
+    border: 1px solid black;
+    background: transparent;
+    border-radius: 5px;
+    padding: 8px 24px;
+    transition: 0.6s;
+}
+
+.card-1 .container .active{
+    color: white;
+    border: 1px solid transparent;
+    background: red;
+}
+
+.card-1 .container button:hover, .card-2 .container button:hover, .card-3 .container button:hover, .card-4 .container button:hover{
+    color: white;
+    border: 1px solid transparent;
+    background: red;
+}
+
+@media screen and (max-width: 600px){
+    .main{
+        padding: 12% 6% 8%;
+    }
+    .main h1{
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    .main-row{
+        display: block;
+    }
+    .main-row .col-1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 36px;
+    }
+    .main-row .col-1 h1{
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    #Category{
+        font-size: 14px;
+        margin-right: -40px;
+        margin-bottom: 0;
+    }
+    #Brand{
+        font-size: 14px;
+    }
+    .main-row .col-1 h3{
+        font-size: 18px;
+        margin-top: 0;
+    }
+    .main-row .col-2{
+        width: 100%;
+        display: grid;
+        max-height: max-content;
+        gap: 6px;
+        grid-template-columns: auto;
+    }
+    .card-1 img, .card-2 img, .card-3 img, .card-4 img{
+        max-width: fit-content;
+    }
+    .card-1 .container h1, .card-2 .container h1, .card-3 .container h1, .card-4 .container h1{
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    .card-1 .container button, .card-2 .container button, .card-3 .container button, .card-4 .container button{
+        padding: 7px 21px;
+    }
+}
+
+@media screen and (min-width:600px) {
+    .main{
+        padding: 6%;
+    }
+    .main h1{
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+    .main-row .col-1 h1{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    #Category{
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    #Brand{
+        font-size: 14px;
+    }
+    .main-row .col-1 h3{
+        font-size: 16px;
+        margin-top: 24px;
+    }
+    .main-row .col-2{
+        gap: 6px;
+    }
+    .card-1 img, .card-2 img, .card-3 img, .card-4 img{
+        max-width: 120px;
+    }
+    .card-1 .container h1, .card-2 .container h1, .card-3 .container h1, .card-4 .container h1{
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+    .card-1 .container button, .card-2 .container button, .card-3 .container button, .card-4 .container button{
+        font-size: 10px;
+        padding: 6px 14px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .main h1{
+        font-size: 28px;
+    }
+    .main-row .col-1 h1{
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+    #Category{
+        font-size: 15px;
+    }
+    #Brand{
+        font-size: 15px;
+    }
+    .main-row .col-1 h3{
+        font-size: 18px;
+        margin-top: 28px;
+    }
+    .main-row .col-2{
+        gap: 8px;
+    }
+    .card-1 img, .card-2 img, .card-3 img, .card-4 img{
+        max-width: 150px;
+    }
+    .card-1 .container h1, .card-2 .container h1, .card-3 .container h1, .card-4 .container h1{
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    .card-1 .container button, .card-2 .container button, .card-3 .container button, .card-4 .container button{
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .main{
+        padding: 6% 8%;
+    }
+    .main h1{
+        font-size: 32px;
+        margin-bottom: 48px;
+    }
+    .main-row .col-1 h1{
+        font-size: 24px;
+        margin-bottom: 28px;
+    }
+    #Category{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    #Brand{
+        font-size: 18px;
+    }
+    .main-row .col-1 h3{
+        font-size: 21px;
+        margin-top: 32px;
+    }
+    .card-1 img, .card-2 img, .card-3 img, .card-4 img{
+        max-width: 200px;
+    }
+    .card-1 .container h1, .card-2 .container h1, .card-3 .container h1, .card-4 .container h1{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .card-1 .container button, .card-2 .container button, .card-3 .container button, .card-4 .container button{
+        font-size: 14px;
+        padding: 6px 14px;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .main{
+        padding: 6% 12%;
+    }
+    .main h1{
+        font-size: 32px;
+        margin-bottom: 56px;
+    }
+    .main-row .col-1 h1{
+        font-size: 24px;
+        margin-bottom: 48px;
+    }
+    #Category{
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+    #Brand{
+        font-size: 20px;
+    }
+    .main-row .col-1 h3{
+        font-size: 22px;
+        margin-top: 48px;
+    }
+    .main-row .col-2{
+        gap: 24px;
+    }
+    .card-1 img, .card-2 img, .card-3 img, .card-4 img{
+        max-width: fit-content;
+    }
+    .card-1 .container h1, .card-2 .container h1, .card-3 .container h1, .card-4 .container h1{
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+    .card-1 .container button, .card-2 .container button, .card-3 .container button, .card-4 .container button{
+        font-size: 18px;
+        padding: 8px 24px;
+    }
+}

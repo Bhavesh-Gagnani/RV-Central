@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>RV Central</title>
+</head>
+<body>
+    
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <h1>&#82;&#86;<i id="logo">Central</i></h1>
+            </div>
+            <div class="nav-main" id="nav-main">
+                <span id="close" onclick="hide()">&#215;</span>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <select name="Stock">
+                            <option value="Stock">Out Stock</option>
+                        </select>
+                    </li>
+                    <li>
+                        <select name="Range">
+                            <option value="Range">Our Range</option>
+                        </select>
+                    </li>
+                    <li><a href="#">About Us</a></li>
+                    <li>
+                        <select name="Contact">
+                            <option value="Contact">Contact Us</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <span id="menu" onclick="menu()">&#9776;</span>
+        </div>
+    </nav>
+ 
+    <div class="nav-top">
+        <p>&#102;</p>
+        <a href="#">Call Us Now</a>
+    </div>
+
+    <header>
+        <div class="row">
+            <div class="col-1">
+                <div class="col-1-con">
+                    <h1>Your Next Adventure With <i >Style</i></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis eligendi odio numquam.</p>
+                </div>
+            </div>
+            <div class="col-2">
+            </div>
+        </div>
+        <div class="form">
+            <ul>
+                <li id="loca">
+                    <select name="location">
+                        <option value="location">Location</option>
+                    </select>
+                </li>
+                <li id="Used">
+                    <select name="Used">
+                        <option value="Used">New or Used</option>
+                    </select>
+                </li>
+                <li id="Make">
+                    <select name="Make">
+                        <option value="Make">Make</option>
+                    </select>
+                </li>
+                <li id="Model">
+                    <select name="Model">
+                        <option value="Model">Model</option>
+                    </select>
+                </li>
+                <li id="Type">
+                    <select name="Type">
+                        <option value="Type">Type</option>
+                    </select>
+                </li>
+            </ul>
+            <button id="Search">Search</button>
+        </div>
+    </header>
+
+    <section>
+        <div class="main">
+            <h1>Explore Our Range</h1>
+            <div class="main-row">
+                <div class="col-1">
+                    <h1>Browse By:</h1>
+                    <h2 id="Category">Category</h2>
+                    <h2 id="Brand">Brand</h2>
+                    <h3 id="View">View All</h3>
+                </div>
+                <div class="col-2">
+                    <div class="card-1">
+                        <img src="Images/Img-2.png">
+                        <div class="container">
+                            <h1>Campers</h1>
+                            <button class="active">Explore Now</button>
+                        </div>
+                    </div>
+                    <div class="card-2">
+                        <img src="Images/Img-3.png">
+                        <div class="container">
+                            <h1>Caravans</h1>
+                            <button>Explore Now</button>
+                        </div>
+                    </div>
+                    <div class="card-3">
+                        <img src="Images/Img-4.png">
+                        <div class="container">
+                            <h1>Motohomes</h1>
+                            <button>Explore Now</button>
+                        </div>
+                    </div>
+                    <div class="card-4">
+                        <img src="Images/Img-5.png">
+                        <div class="container">
+                            <h1>Camping Trailers</h1>
+                            <button>Explore Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        let nav = document.getElementById("nav-main");
+    
+        function menu(){
+            nav.style.right = "0px";
+        }
+    
+        function hide(){
+            nav.style.right = "-200px";
+        }
+    
+    </script>
+
+</body>
+</html>
